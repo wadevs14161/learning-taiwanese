@@ -1,0 +1,68 @@
+.description {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.question {
+    margin-top: 20px;
+}
+
+/* Custom styling for the buttons */
+.option-button {
+    border-radius: 50px; /* Makes them pill-shaped */
+    padding: 12px 24px;   /* Adjust padding for larger, more clickable area */
+    font-size: 1.1rem;    /* Slightly larger font */
+    font-weight: 200;     /* Semi-bold text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    background-color: #14b8a6; /* Teal 500 */
+    border-color: #14b8a6;
+    color: #fff;
+}
+
+/* Hover effect */
+.option-button:hover {
+    transform: translateY(-2px); /* Lifts the button slightly */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+    background-color: #0d9488; /* Teal 600 */
+    border-color: #0d9488;
+    color: #fff;
+}
+
+/* Active/Clicked effect */
+.option-button:active {
+    transform: translateY(0); /* Pushes the button back down */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03); /* Smaller shadow on active */
+    background-color: #115e59; /* Teal 800 */
+    border-color: #115e59;
+    color: #fff;
+}
+
+/* For focus accessibility */
+.option-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(20, 184, 166, 0.25); /* Teal focus ring */
+    outline: none; /* Remove default outline */
+}
+
+/* Optional: If you want a slightly different color */
+.btn-primary {
+    background-color: #14b8a6; /* Teal 500 */
+    border-color: #14b8a6;
+}
+.btn-primary:hover {
+    background-color: #0d9488; /* Teal 600 */
+    border-color: #0d9488;
+}
+
+.score-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
