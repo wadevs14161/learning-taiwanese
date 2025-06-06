@@ -9,7 +9,6 @@
 
 /* Custom styling for the buttons */
 .option-button {
-    border-radius: 50px; /* Makes them pill-shaped */
     padding: 12px 24px;   /* Adjust padding for larger, more clickable area */
     font-size: 1.1rem;    /* Slightly larger font */
     font-weight: 200;     /* Semi-bold text */
@@ -44,15 +43,6 @@
     outline: none; /* Remove default outline */
 }
 
-/* Optional: If you want a slightly different color */
-.btn-primary {
-    background-color: #14b8a6; /* Teal 500 */
-    border-color: #14b8a6;
-}
-.btn-primary:hover {
-    background-color: #0d9488; /* Teal 600 */
-    border-color: #0d9488;
-}
 
 .score-display {
     position: absolute;

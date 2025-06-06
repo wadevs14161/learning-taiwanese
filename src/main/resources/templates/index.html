@@ -18,7 +18,7 @@
         <span th:text="${question.TL}"></span>
         <div class="d-flex justify-content-center gap-3 mt-3">
             <th:block th:each="option, iterStat : ${options}">
-                <button type="button" class="btn btn-primary btn-lg option-button"
+                <button type="button" class="option-button"
                     th:text="${{'A.', 'B.', 'C.'}[iterStat.index]} + ' ' + ${option}"
                     th:attr="data-correct=${option == question.Meaning}">
                 </button>

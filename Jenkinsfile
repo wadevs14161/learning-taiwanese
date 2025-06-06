@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/wadevs14161/learning-taiwanese.git'
+                git branch: 'main', url: 'https://github.com/wadevs14161/learning-taiwanese.git'
             }
         }
 
