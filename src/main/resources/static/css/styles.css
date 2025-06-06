@@ -9,6 +9,7 @@
 
 /* Custom styling for the buttons */
 .option-button {
+    border-radius: 8px; /* Rounded corners */
     padding: 12px 24px;   /* Adjust padding for larger, more clickable area */
     font-size: 1.1rem;    /* Slightly larger font */
     font-weight: 200;     /* Semi-bold text */
