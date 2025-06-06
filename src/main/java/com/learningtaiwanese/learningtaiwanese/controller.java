@@ -1,13 +1,16 @@
 package com.learningtaiwanese.learningtaiwanese;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
-import java.io.FileReader;
+// import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,14 +27,18 @@ public class controller {
 
     // Load questions from CSV file
     public controller() {
-        String csvFilePath = "src/main/resources/data/words_with_options.csv";
-        try (CSVReader csvReader = new CSVReader(new FileReader(csvFilePath))) {
+        String csvFilePath = "data/words_with_options.csv";
+        try (
+            InputStreamReader isr = new InputStreamReader(new ClassPathResource(csvFilePath).getInputStream(), "UTF-8");
+            BufferedReader br = new BufferedReader(isr);
+            CSVReader csvReader = new CSVReader(br)
+        ) {
             // Read the header
             String[] headers = csvReader.readNext();
             if (headers == null) {
                 throw new IOException("CSV file is empty or invalid");
             }
-            
+
             // Read the data rows
             String[] row;
             while ((row = csvReader.readNext()) != null) {
